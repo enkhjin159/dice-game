@@ -36,12 +36,12 @@ function startGame(){
             // Shoog shideh eventListener
 document.querySelector(".btn-roll").addEventListener("click", function (){
             // 1-6 random too gargaj awah
-    var diceNumber = Math.floor(Math.random() * 6) + 1;
+var diceNumber = Math.floor(Math.random() * 6) + 1;
                 // shoonii zurgiig webd oorchilj oruulna
-    diceDom.style.display = "block";
-    diceDom.src ='dice-' + diceNumber + '.png';
+diceDom.style.display = "block";
+diceDom.src ='dice-' + diceNumber + '.png';
             // toglogchiin eeljiin onoog oorchilno.
-    if(diceNumber !== 1 ){
+if(diceNumber !== 1 ){
                 // -1s ylgaatai too buula. onoog nemnee
         roundScore = roundScore + diceNumber;
         document.getElementById('current-' + activePlayer).textContent = roundScore
@@ -50,8 +50,8 @@ document.querySelector(".btn-roll").addEventListener("click", function (){
         
     }
 });
-// Hold towchiig ajilluulnaa
-document.querySelector(".btn-hold").addEventListener("click", function(){
+    // Hold towchiig ajilluulnaa
+    document.querySelector(".btn-hold").addEventListener("click", function(){
             //tsugluulsan onoog niit global onoondeer nemnee
     scores[activePlayer] = scores[activePlayer] + roundScore;
     document.getElementById('score-' + activePlayer).textContent = scores[activePlayer]
@@ -82,5 +82,5 @@ function eeljSolih(){
     diceDom.style.display = "none";
 }
 
-document.querySelector(".btn-new").addEventListener("click", startGame);
+    document.querySelector(".btn-new").addEventListener("click", startGame);
 
